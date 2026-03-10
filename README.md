@@ -174,21 +174,15 @@ Emotion-Aware-AI-Agent/
 │   ├── stage2_exploration.md
 │   ├── stage3_intervention.md
 │   ├── stage4_closure.md
-│   └── memory_retrieval_rules.md   # 新增：长期记忆检索规则 prompt
+│   └── memory_retrieval_rules.md  
 ├── agent_workflow/
 │   └── workflow_diagram.md
 ├── system_design/
-│   └── agent_architecture.md       # 上面的架构设计
+│   └── agent_architecture.md     
 ├── conversation_examples/
 └── output_processing/
-    └── sentence_pause_handling.md # 新增：断句与停顿逻辑
+    └── sentence_pause_handling.md
     
-- CBT × AI Agent combination: convert psychological techniques into dialogue strategies  
-- Prompt Engineering: constrain AI responses (style, timing, safety)  
-- Workflow: manage multi-stage dialogues with memory and relational state  
-- Safety mechanisms: restrict high-risk topics and suggest professional support if triggered  
-
-（CBT 与 AI Agent 结合，将心理技术模块转化为对话策略；Prompt 工程约束 AI；Workflow 管理多阶段对话；安全机制限制风险话题并建议专业帮助）
 
 ---
 
