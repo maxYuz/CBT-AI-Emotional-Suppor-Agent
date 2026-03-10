@@ -102,24 +102,87 @@ b.Workflow 对话控制
 
 ---
 
-# 5. System Architecture
-# 5. 系统架构图
+# 4 Agent Architecture
+# 智能体架构设计
+
+This document describes the architecture of the Emotion-Aware AI Agent.  
+（本文档说明情绪感知 AI Agent 的架构设计）
+
+---
+
+#Core Modules
+# 核心模块
+
+1. User Input / 用户输入 
+   - Receive and preprocess user messages  
+   - 接收并预处理用户输入
+
+2. Emotion Detection & State Analysis / 情绪感知与状态分析  
+   - Detect emotional cues, tone, and context  
+   - 分析情绪、语气和上下文
+
+**→ Memory Storage & Retrieval / 记忆库存取**  
+   - Maintain long-term memory of previous conversations  
+   - Use retrieval prompts to fetch relevant information for context  
+   - 长期记忆库保存历史对话，并通过规则 prompt 检索上下文相关信息
+
+3. Stage Classification / 对话阶段分类  
+   - Determine the conversation stage: Engagement / Exploration / Intervention / Closure  
+   - 判断对话阶段：建立 / 探索 / 干预 / 结束
+
+4. Prompt Selection & Response Strategy / Prompt 选择与响应策略
+   - Select appropriate prompts based on stage  
+   - Generate AI response plan  
+   - 根据阶段选择 Prompt 并生成响应策略
+
+**→ Sentence Segmentation & Pause Handling / 断句与停顿处理**  
+   - Improve realism of AI output with controlled pauses  
+   - 可通过断句和停顿处理，让 AI 回复更自然、像真人
+
+5. **Response Generation / 响应生成  
+   - Generate the final AI message to the user  
+   - 输出最终响应，并更新阶段状态
+
+---
+
+## Workflow Diagram
+## 流程图示意
 User Input
 ↓
 Emotion Detection & State Analysis
 ↓
-Memory Storage & Retrieval # 长期记忆存储与检索
+Memory Storage & Retrieval
 ↓
 Stage Classification
 ↓
 Prompt Selection & Response Strategy
 ↓
-Sentence Segmentation & Pause Handling # 断句与停顿处理
+Sentence Segmentation & Pause Handling
 ↓
 Response Generation
 ↓
 User Output
 
+
+> Modular design allows updating prompts, memory rules, or pause handling independently.  
+> （模块化设计，可独立更新 Prompt、记忆规则或停顿处理逻辑）
+
+Emotion-Aware-AI-Agent/
+├── README.md
+├── prompt_architecture/
+│   ├── stage1_engagement.md
+│   ├── stage2_exploration.md
+│   ├── stage3_intervention.md
+│   ├── stage4_closure.md
+│   └── memory_retrieval_rules.md   # 新增：长期记忆检索规则 prompt
+├── agent_workflow/
+│   └── workflow_diagram.md
+├── system_design/
+│   └── agent_architecture.md       # 上面的架构设计
+├── conversation_examples/
+└── output_processing/
+    └── sentence_pause_handling.md # 新增：断句与停顿逻辑
+    
 - CBT × AI Agent combination: convert psychological techniques into dialogue strategies  
 - Prompt Engineering: constrain AI responses (style, timing, safety)  
 - Workflow: manage multi-stage dialogues with memory and relational state  
@@ -128,6 +191,7 @@ User Output
 （CBT 与 AI Agent 结合，将心理技术模块转化为对话策略；Prompt 工程约束 AI；Workflow 管理多阶段对话；安全机制限制风险话题并建议专业帮助）
 
 ---
+
 
 # 6. Use Cases
 # 6. 项目使用场景
