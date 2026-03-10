@@ -1,5 +1,5 @@
-# CBT-AI-Emotional-Support-Agent
-# 基于CBT 情绪感支持 AI Agent
+# CBT-Emotional-Support-AI-Agent-Design
+# 基于CBT 情绪感支持 AI Agent:架构搭建与prompt工程分享
 
 An AI emotional support agent designed based on Cognitive Behavioral Therapy (CBT) principles.  
 It emphasizes multi-turn dialogue, relationship building, and interaction flows inspired by real psychological consultation structures.  
@@ -13,7 +13,8 @@ It emphasizes multi-turn dialogue, relationship building, and interaction flows 
 This project designs an AI agent for psychological growth and emotional support using CBT principles.  
 It leverages prompt engineering and multi-node workflow architecture to guide interactions in a structured, template-based way.  
 The system also includes a response evaluation module that reviews AI outputs and creates a feedback loop for improving future interactions.
--本项目是一个基于认知行为疗法（Cognitive Behavioral Therapy, CBT）-心理咨询理论方法设计的 AI 心理成长、情绪支持智能体。通过将心理辅导应用于语言大模型，以流程模版化、结构化与类真实心理互助的对话，帮助用户进行日常的情绪觉察与认知反思。
+-本项目是一个基于认知行为疗法（Cognitive Behavioral Therapy, CBT）-心理咨询理论方法设计的 AI 心理成长、情绪支持智能体。
+通过将心理辅导应用于语言大模型，以流程模版化、结构化与类真实心理互助的对话，帮助用户进行日常的情绪觉察与认知反思。
 该智能体通过Prompt Engineering + 多节点Workflow 工作流架构进行构建，使AI在对话过程中能够按照一定的心理支持逻辑进行互动，而不是简单的随机聊天。
 系统还包含一个 AI 回复评估模块，对生成回复进行评分，并形成反馈回路，用于持续优化后续对话质量。
 
@@ -67,10 +68,11 @@ The AI agent guides users through four progressive stages based on relational in
 - This project integrates CBT and humanistic psychology principles for stepwise guidance.  
 - CBT provides clear structure and modular techniques suitable for dialogue workflows.  
 - Humanistic approach emphasizes relationship building and supportive conversation atmosphere.  
-（如何让 AI 对话具有心理学结构（咨询流程化、模版化、情感互动性强）
 许多 AI 情绪陪伴产品的问题是：只停留在安慰与共情；缺乏结构化、理论化、连续性的心理支持、情感互动与问题解决。
-因此本项目选择 CBT（认知行为疗法）与人本主义心理学流派（整合取向） 作为对话设计基础，因为 CBT 具有：结构清晰-具有明确的咨询流程与干预逻辑、心理咨询技术模块化-技术可以拆分为对话步骤、标准化搞-易转化为对话流设计；而人本主义具有：重视关系建立与维持、支持性对话氛围。
-通过拆解 CBT与人本主义心理学技术，使AI可以逐步引导用户进行心理辅助。）
+因此本项目选择 CBT（认知行为疗法）与人本主义心理学流派（整合取向） 作为对话设计基础。
+因为 CBT 具有：结构清晰-具有明确的咨询流程与干预逻辑、心理咨询技术模块化-技术可以拆分为对话步骤、标准化搞-易转化为对话流设计；
+而人本主义具有：重视关系建立与维持、支持性对话氛围。
+通过拆解 CBT与人本主义心理学技术，使AI可以逐步引导用户进行心理辅助。
 
  3.2 Dialogue Stage Control / 对话阶段控制
 
@@ -92,12 +94,15 @@ The AI agent guides users through four progressive stages based on relational in
   2. *Workflow Management*: multi-node workflow with memory retrieval ensures smooth stage transition and emotional support continuity.  
 
 （大模型在长对话中容易出现：回复风格漂移；技术使用混乱；对话逻辑不稳定；情感回不一致或缺乏持续性。
-然而，在情绪支持与心理对话场景中，用户不仅需要逻辑清晰的回应，还需要稳定、连续的情感互动体验。如果 AI 在不同回复中表现出明显的情绪风格变化，容易破坏用户的信任感与对话沉浸感。
+然而，在情绪支持与心理对话场景中，用户不仅需要逻辑清晰的回应，还需要稳定、连续的情感互动体验。
+如果 AI 在不同回复中表现出明显的情绪风格变化，容易破坏用户的信任感与对话沉浸感。
 因此，本项目在设计中同时关注对话结构稳定性与情感互动体验，并通过以下方式进行控制：
+
 a.Prompt Engineering
 -通过系统 Prompt 对 AI 的回应风格进行约束，包括：
 角色（身份规则）、共情表达方式、语气与互动风格、回答策略、关系亲密度规则、阶段规则、心理技术的使用时机、规避风险。
 从而保证 AI 在整个对话过程中保持稳定的情感表达与支持性互动风格。
+
 b.Workflow 对话控制
 -通过阶段化、多节点 Workflow 管理对话流程，以长期记忆为基础，根据大模型判断亲密度，进入不同咨询阶段使用不同的对话策略，使 AI 在与用户不同阶段罐子中情感支持、问题探索与认知引导之间形成自然过渡。
 通过这种设计，系统能够在结构化心理支持与自然情感互动之间保持平衡，从而构建一个既具有心理学逻辑，又具备稳定情感体验的AI对话系统。）
