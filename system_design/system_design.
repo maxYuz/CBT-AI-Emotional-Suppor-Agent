@@ -1,0 +1,114 @@
+# Agent Architecture
+# AI 智能体系统架构
+
+This document explains the architecture of the Emotion-Aware AI Agent.
+
+（本文档说明 CBT-AI-Emotional-Support-Agent 的系统架构）
+
+---
+
+## Core Architecture
+
+The system consists of several functional modules.
+
+系统由多个功能模块组成：
+
+1 User Input Layer  
+用户输入层
+
+Receives user messages and sends them to the analysis module.
+
+接收用户输入。
+
+---
+
+
+
+---
+
+2 Memory Storage & Retrieval  
+长期记忆系统
+
+Stores important conversation information and retrieves relevant memories.
+
+保存对话关键内容并提供检索能力。
+
+---
+
+3 Conversation Stage Classification + Emotion Detection & State Analysis  
+情绪识别与亲密度（关系）状态分析
+
+The system analyzes:
+
+系统分析：
+
+• Emotional tone  
+• Conversation context  
+• User intent
+对话阶段判断
+
+The system determines the current conversation stage:
+
+系统判断当前阶段：
+
+• Engagement  
+• Exploration  
+• Intervention  
+• Closure
+
+---
+
+4 不同阶段模型+ Prompt Strategy Module  
+Prompt 策略模块
+
+Selects different prompt templates based on conversation stage.
+
+根据分流进入的不同阶段模型 对应不同 Prompt 模板。
+
+---
+
+5 Response Generation  
+回复生成
+
+The language model generates responses according to the selected strategy.
+
+语言模型根据策略生成回复。
+
+---
+
+6 Response Review Model  
+AI 回复评估模型
+
+The system evaluates the generated response before storing it in memory.
+
+系统会对生成的回复进行评估。
+
+Evaluation dimensions include:
+
+评估维度包括：
+
+• Emotional empathy  
+• Conversation coherence  
+• Psychological support quality  
+• Safety compliance
+
+Evaluation results are stored in the memory system.
+
+评估结果会存入长期记忆系统。
+
+---
+
+7 Output Processing  
+输出处理
+
+The system processes responses using sentence segmentation and pause handling.
+
+系统对回复进行断句与停顿处理，使对话更自然。
+
+---
+
+## Architecture Diagram
+
+See the workflow diagram in the repository.
+
+系统流程图见项目 workflow 图。
